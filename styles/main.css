@@ -1,0 +1,96 @@
+main {
+    position: relative;
+
+    & .show-kit{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20.785rem;
+
+        & div {
+            font-size: var(--title-sm);
+            font-weight: var(--fw-bold);
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+    
+            & img {
+                width: 2rem;
+                height: 2rem;
+                filter: drop-shadow(0 0 18px var(--pink-base));
+            }
+        }
+    }
+
+    & .book-kit {
+        justify-content: center;
+        height: 38rem;
+        margin-block: 13.875rem 10.562rem;
+        position: relative;
+
+        &:hover {
+            & img[src*="pin"] {
+                transform: translate(30.5rem, 28.5rem) rotate(-10deg);
+            }
+
+            & img[src*="bookmark-yellow"] {
+                transform: translate(64.5rem, -5.5rem) rotate(10deg);
+            }
+
+            & img[src*="bookmark-purple"] {
+                transform: translate(71rem, 0.15rem) rotate(20deg);
+            }
+            
+        }
+
+        & img {
+            position: absolute;
+            inset: 0;
+        }
+        
+        & img[src*="book"] {
+            width: 29.187rem;
+            transform: translateX(39rem);
+            z-index: -1;
+        }
+
+        & img[src*="pin"] {
+            width: 13.875rem;
+            height: 15.875rem;
+            transform: translate(40.5rem, 21.5rem);
+            z-index: -2;
+            transition: transform 500ms ease-in-out;
+        }
+
+        & img[src*="bookmark-yellow"]
+        {
+            width: 10.75rem;
+            height: 33.5rem;
+            transform: translate(57rem, .5rem);
+            z-index: -2;
+            transition: transform 500ms ease-in-out;
+        }
+
+        & img[src*="bookmark-purple"]{
+            width: 10.75rem;
+            height: 33.5rem;
+            transform: translate(57rem, 3.5rem);
+            z-index: -3;
+            transition: transform 500ms ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            
+            top: -9%;
+            bottom: 10%;
+            right: 20%;
+            left: 20%;
+
+            background-color: var(--pink-dark);
+            filter: blur(10rem) opacity(20%) saturate(90%);
+        }
+    }
+    
+}

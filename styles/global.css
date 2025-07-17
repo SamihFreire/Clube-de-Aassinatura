@@ -88,7 +88,7 @@ h3 {
 body {
     background-color: var(--shape-background);
     overflow-x: hidden;
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
